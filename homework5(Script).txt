@@ -1,0 +1,7 @@
+#!/bin/bash
+
+USER = "$(whoami)"
+echo  "Today is: $(date)"
+echo "Hello, $USER!"
+echo "The present working directory is $(pwd)"
+mkdir -p /opt/090523_morning/Vladimir/test
