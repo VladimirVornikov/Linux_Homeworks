@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for num in {1..10}
+do
+        echo "$(date +"%H:%M:%S") $(ps -ef | wc -l)"
+        #sleep 5
+        sleep 0.5
+done
+
+cat /proc/cpuinfo > /opt/090523_morning/Vladimir/cpu_info.txt
+cat /etc/os-release | grep "NAME=" | awk '{print $2}'  > /opt/090523_morning/Vladimir/os_release_info.txt
+
+for num in {50..100}
+do
+        touch "/opt/090523_morning/Vladimir/$num.txt"
+done
+
